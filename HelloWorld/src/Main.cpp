@@ -1,7 +1,9 @@
 #include <iostream>
 
+void Log(const char* message);
+
 int main()
 {
-	std::cout << "Hellow World!" <<  std::endl;
-	std::cin.get();
+	Log("Hello World!");
+	/*std::cin.get();*/
 }

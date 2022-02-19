@@ -2,6 +2,7 @@
 <CodeLite_Project Name="HelloWorld" InternalType="">
 	<VirtualDirectory Name="src">
 		<VirtualDirectory Name="src">
+			<File Name="src/Log.cpp"/>
 			<File Name="src/Main.cpp"/>
 		</VirtualDirectory>
 	</VirtualDirectory>
