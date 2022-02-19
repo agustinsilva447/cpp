@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Werror -std=c++14 -g   CMakeFiles/Math.dir/src/Log.cpp.o CMakeFiles/Math.dir/src/Math.cpp.o  -o Math 

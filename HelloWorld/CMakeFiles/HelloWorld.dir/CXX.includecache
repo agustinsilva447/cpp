@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/src/Main.cpp
-iostream
--
+/home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/src/EndBrace.h
+
+/home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/src/Math.cpp
+EndBrace.h
+/home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/src/EndBrace.h
 

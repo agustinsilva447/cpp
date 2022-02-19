@@ -1,0 +1,3 @@
+/home/agustinsilva447/Escritorio/Github/cpp/Math/CMakeFiles/rebuild_cache.dir
+/home/agustinsilva447/Escritorio/Github/cpp/Math/CMakeFiles/edit_cache.dir
+/home/agustinsilva447/Escritorio/Github/cpp/Math/CMakeFiles/Math.dir

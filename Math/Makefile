@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/agustinsilva447/Escritorio/Github/cpp/HelloWorld
+CMAKE_SOURCE_DIR = /home/agustinsilva447/Escritorio/Github/cpp/Math
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/agustinsilva447/Escritorio/Github/cpp/HelloWorld
+CMAKE_BINARY_DIR = /home/agustinsilva447/Escritorio/Github/cpp/Math
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/CMakeFiles /home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustinsilva447/Escritorio/Github/cpp/Math/CMakeFiles /home/agustinsilva447/Escritorio/Github/cpp/Math/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustinsilva447/Escritorio/Github/cpp/HelloWorld/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustinsilva447/Escritorio/Github/cpp/Math/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HelloWorld
+# Target rules for targets named Math
 
 # Build rule for target.
-HelloWorld: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HelloWorld
-.PHONY : HelloWorld
+Math: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Math
+.PHONY : Math
 
 # fast build rule for target.
-HelloWorld/fast:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/build
-.PHONY : HelloWorld/fast
+Math/fast:
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/build
+.PHONY : Math/fast
 
 src/Log.o: src/Log.cpp.o
 
@@ -129,7 +129,7 @@ src/Log.o: src/Log.cpp.o
 
 # target to build an object file
 src/Log.cpp.o:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Log.cpp.o
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/src/Log.cpp.o
 .PHONY : src/Log.cpp.o
 
 src/Log.i: src/Log.cpp.i
@@ -138,7 +138,7 @@ src/Log.i: src/Log.cpp.i
 
 # target to preprocess a source file
 src/Log.cpp.i:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Log.cpp.i
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/src/Log.cpp.i
 .PHONY : src/Log.cpp.i
 
 src/Log.s: src/Log.cpp.s
@@ -147,35 +147,8 @@ src/Log.s: src/Log.cpp.s
 
 # target to generate assembly for a file
 src/Log.cpp.s:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Log.cpp.s
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/src/Log.cpp.s
 .PHONY : src/Log.cpp.s
-
-src/Main.o: src/Main.cpp.o
-
-.PHONY : src/Main.o
-
-# target to build an object file
-src/Main.cpp.o:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Main.cpp.o
-.PHONY : src/Main.cpp.o
-
-src/Main.i: src/Main.cpp.i
-
-.PHONY : src/Main.i
-
-# target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
-
-src/Main.s: src/Main.cpp.s
-
-.PHONY : src/Main.s
-
-# target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
 
 src/Math.o: src/Math.cpp.o
 
@@ -183,7 +156,7 @@ src/Math.o: src/Math.cpp.o
 
 # target to build an object file
 src/Math.cpp.o:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Math.cpp.o
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/src/Math.cpp.o
 .PHONY : src/Math.cpp.o
 
 src/Math.i: src/Math.cpp.i
@@ -192,7 +165,7 @@ src/Math.i: src/Math.cpp.i
 
 # target to preprocess a source file
 src/Math.cpp.i:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Math.cpp.i
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/src/Math.cpp.i
 .PHONY : src/Math.cpp.i
 
 src/Math.s: src/Math.cpp.s
@@ -201,7 +174,7 @@ src/Math.s: src/Math.cpp.s
 
 # target to generate assembly for a file
 src/Math.cpp.s:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/Math.cpp.s
+	$(MAKE) -f CMakeFiles/Math.dir/build.make CMakeFiles/Math.dir/src/Math.cpp.s
 .PHONY : src/Math.cpp.s
 
 # Help Target
@@ -210,15 +183,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HelloWorld"
+	@echo "... edit_cache"
+	@echo "... Math"
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"
-	@echo "... src/Main.o"
-	@echo "... src/Main.i"
-	@echo "... src/Main.s"
 	@echo "... src/Math.o"
 	@echo "... src/Math.i"
 	@echo "... src/Math.s"

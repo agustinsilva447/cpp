@@ -5,3 +5,6 @@ CMakeFiles/HelloWorld.dir/src/Log.cpp.o: src/Log.cpp
 
 CMakeFiles/HelloWorld.dir/src/Main.cpp.o: src/Main.cpp
 
+CMakeFiles/HelloWorld.dir/src/Math.cpp.o: src/EndBrace.h
+CMakeFiles/HelloWorld.dir/src/Math.cpp.o: src/Math.cpp
+
