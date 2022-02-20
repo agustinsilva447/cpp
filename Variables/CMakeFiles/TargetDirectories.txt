@@ -1,0 +1,3 @@
+/home/agustinsilva447/Escritorio/Github/cpp/Variables/CMakeFiles/rebuild_cache.dir
+/home/agustinsilva447/Escritorio/Github/cpp/Variables/CMakeFiles/edit_cache.dir
+/home/agustinsilva447/Escritorio/Github/cpp/Variables/CMakeFiles/Variables.dir
