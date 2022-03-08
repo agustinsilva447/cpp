@@ -1,0 +1,8 @@
+﻿  HelloWorld.cpp
+C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\HelloWorld\HelloWorld.cpp(9,6): warning C4189: 'a': la variable local se ha inicializado pero no se hace referencia a ella
+C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\HelloWorld\HelloWorld.cpp(11,6): warning C4189: 'e': la variable local se ha inicializado pero no se hace referencia a ella
+C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\HelloWorld\HelloWorld.cpp(9,13): warning C4189: 'b': la variable local se ha inicializado pero no se hace referencia a ella
+C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\HelloWorld\HelloWorld.cpp(11,12): warning C4189: 'f': la variable local se ha inicializado pero no se hace referencia a ella
+C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\HelloWorld\HelloWorld.cpp(10,6): warning C4189: 'c': la variable local se ha inicializado pero no se hace referencia a ella
+C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\HelloWorld\HelloWorld.cpp(10,12): warning C4189: 'd': la variable local se ha inicializado pero no se hace referencia a ella
+  HelloWorld.vcxproj -> C:\Users\Agustin\Desktop\Github\cpp\learncpp\0\HelloWorld\x64\Debug\HelloWorld.exe
