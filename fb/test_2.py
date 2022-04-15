@@ -1,50 +1,51 @@
-import math
+import collections
 
+class Node:
+    def __init__(self, val=None):
+        self.left = None
+        self.right = None
+        self.val =  val       
 
-def canGetExactChange(targetMoney, denominations):
-  flag = False
-  if targetMoney in denominations:
-    return True
-  for i,j in enumerate(denominations):
-      if (targetMoney - j) >= 0:
-        flag = canGetExactChange(targetMoney - j, denominations)
-  return flag
+def levelOrderPrint(tree):
+    if not tree:
+        return
+    nodes = collections.deque([tree])
+    currentCount, nextCount = 1, 0
+    while (len(nodes)!=0):
+        currentNode = nodes.popleft()
+        currentCount -= 1
+        print(currentNode.val,end=" ")
+        if currentNode.left:
+            nodes.append(currentNode.left)
+            nextCount += 1
+        if currentNode.right:
+            nodes.append(currentNode.right)
+            nextCount += 1
+        if (currentCount == 0):
+            print("\n")
+            currentCount, nextCount = nextCount, currentCount
 
+def trimBST(tree, minVal, maxVal):     
+    if not tree: 
+        return     
+    tree.left  = trimBST(tree.left,  minVal, maxVal) 
+    tree.right = trimBST(tree.right, minVal, maxVal)     
+    if (minVal<=tree.val<=maxVal): 
+        return tree     
+    if (tree.val<minVal): 
+        return tree.right     
+    if (tree.val>maxVal): 
+        return tree.left 
 
-#########
-
-
-def printString(string):
-  print('[\"', string, '\"]', sep='', end='')
-
-test_case_number = 1
-
-def check(expected, output):
-  global test_case_number
-  result = False
-  if expected == output:
-    result = True
-  rightTick = '\u2713'
-  wrongTick = '\u2717'
-  if result:
-    print(rightTick, 'Test #', test_case_number, sep='')
-  else:
-    print(wrongTick, 'Test #', test_case_number, ': Expected ', sep='', end='')
-    printString(expected)
-    print(' Your output: ', end='')
-    printString(output)
-    print()
-  test_case_number += 1
-
-if __name__ == "__main__":
-  target_1 = 94
-  arr_1 = [5, 10, 25, 100, 200]
-  expected_1 = False
-  output_1 = canGetExactChange(target_1, arr_1)
-  check(expected_1, output_1)
-
-  target_2 = 75
-  arr_2 = [4, 17, 29]
-  expected_2 = True
-  output_2 = canGetExactChange(target_2, arr_2)
-  check(expected_2, output_2)
+tree = Node(8)
+tree.left = Node(3)
+tree.left.left = Node(1)
+tree.left.right = Node(6)
+tree.left.right.left = Node(4)
+tree.left.right.right = Node(7)
+tree.right = Node(10)
+tree.right.right = Node(14)
+tree.right.right.left = Node(13)
+levelOrderPrint(tree)
+tree2 = trimBST(tree, 5, 13)
+levelOrderPrint(tree2)
