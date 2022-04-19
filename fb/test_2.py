@@ -1,28 +1,19 @@
-import numpy as np
-
-def lengthOfLongestSubstring(s: str) -> int:
-    max_cnt = 1
+def longestPalindrome(s: str) -> str:
+    if s == "":
+        return s        
     left = 0
-    while left < len(s) - max_cnt:
-        right = left + max_cnt
-        while right < (len(s) + 1):
-            tot = set()
-            cnt = 0
-            for i in np.arange(left, right, 1):
-                if s[i] not in tot:
-                    tot.add(s[i])
-                    cnt += 1
-                else:
-                    if cnt>max_cnt:
-                        max_cnt = cnt
-                    tot = set()
-                    cnt = 0
-            if cnt>max_cnt:
-                max_cnt = cnt
-            right += 1
-        left += 1
-    return max_cnt
+    right = len(s)
+    while (right - left) > 0:
+        right_aux = right
+        while right_aux <= len(s):
+            if s[left:right_aux] == s[left:right_aux][::-1]:
+                return s[left:right_aux]   
+            right_aux += 1
+            left += 1
+        left = 0
+        right -= 1                
+    return s[0]
 
-a = "wllxdiklosdrdxfohgwringzefwbytmwgxtjhdxwycpbawphcnbmajmeokhoftlmsexakuyixplxmagoojdospvjbcxh"
-b = lengthOfLongestSubstring(a)
+a = "busislnescsicxpvvysuqgcudefrfjbwwjcchtgqyajdfwvkypfwshnihjdztgmyuuljxgvhdiwphrweyfkbnjgerkmifbirubhseuhrugwrabnjafnbdfjnufdstjbkuwtnpflffaqmjbhssjlnqftgjiglvvequhapasarlkcvbmkwnkuvwktbgfoaxteprobdwswcdyddyvrehvmxrrjiiidatidlpihkbmmruysmhhsncmfdanafdrfpdtfgkglcqpwrrtvacuicohspkounojuziittugpqjyhhkwfnflozbispehrtrnizowrlzcuollagxwtznjwzcumvedjwokueuqktvvouwnsmpxqvvpuwprezrbobrpnwaccwljchdguubjulyilzvmandjjleitweybqkjttschrjjlebnmponvlktzzcdtuybugggcqffkcffpamauvxfbonjrobgpvlyzveiwemmtdvbjciaytvesnocnjrwodtcokgcuoiicxapmrzpkfphjniuvzjrhbnqndfshoduejyktebgdabidxlkstepuwvtrtgbxaeheylicvhrxddijshcvdadxzsccmainyfpfdhqdanfccqkzlmhsfilvoybqojlvbcixjzqpbngdvesuokbxhkomsiqfyukvspqthlzxdnlwthrgaxhtpjzhrugqbfokrdcyurivmzgtynoqfjbafboselxnfupnpqlryvlcxeksirvufepfwczosrrjpudbwqxwldgjyfjhzlzcojxyqjyxxiqvfhjdwtgoqbyeocffnyxhyyiqspnvrpxmrtcnviukrjvpavervvztoxajriuvxqveqsrttjqepvvahywuzwtmgyrzduxfqspeipimyoxmkadrvrdyefekjxcmsmzmtbugyckcbjsrymszftjyllfmoeoylzeahnrxlxpnlvlvzltwnmldi"
+b = longestPalindrome(a)
 print(a,b)
